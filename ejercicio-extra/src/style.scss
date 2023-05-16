@@ -38,7 +38,6 @@ header {
     }
 }
 
-
 .page-container {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -95,6 +94,7 @@ main {
       background-color: white;   
       align-items: center;
       justify-content: center;
+      text-align: center;
       
       & img {
         border-radius: 50%;
@@ -107,8 +107,6 @@ main {
       }
     }
 }
-
-
 footer {
   display: flex;
   grid-area: footer;
@@ -119,6 +117,16 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  .front{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 1fr;
+    grid-template-areas: 
+      "page-title"
+      "menu-list"
+      "list";
+  }
   header .toolbar {
     display: none;
   }
@@ -132,16 +140,7 @@ footer {
   footer {
     display: none;
   }
-  .front{
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px 1fr;
-    grid-template-areas: 
-      "page-title"
-      "menu-list"
-      "list";
-  }
+  
 
   .page-title {
     grid-area: page-title ;
@@ -160,25 +159,3 @@ footer {
 }
 
 
-// @media screen and (max-width: 768px) {
-
-//   /* ocultar barra superior con input de búsqueda y nombre de usuario(toolbar) */
-//   header .toolbar {
-//     display: none;
-//   }
-
-//   /* ocultar título del menú(menu-title) */
-//   nav .menu-title {
-//     display: none;
-//   }
-
-//   /* cambiar la orientación del menu list a horizontal */
-//   nav .menu-list {
-//     display: flex;
-//     flex-direction: row;
-//     overflow-x: auto;
-//     -webkit-overflow-scrolling: touch; /* para un desplazamiento más suave en dispositivos móviles */
-//   }
-
- 
-// }
