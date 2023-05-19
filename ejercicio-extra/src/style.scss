@@ -2,14 +2,14 @@
 body {
   margin: 0;
   padding: 0;
-  height: 10vh;
+  height: 100vh;
   width: 100%;
 }
 
 .front{
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -18,10 +18,12 @@ header {
     & .toolbar {
       width: 100%;
       display: flex;
-      margin: 1rem;
       justify-content: space-between;
       & .user {
         margin-right: 2rem;
+      }
+      & > * {
+        margin: 1rem;
       }
     }
     & .page-title {
@@ -38,7 +40,7 @@ header {
 }
 .page-container {
   display: flex;
-  
+  flex: 1;
     & nav {
       background-color: rgb(70, 90, 11);
       & .menu-container{
